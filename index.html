@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>To do list</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="daniel jackowiak" />
+        <meta name="keyword" content="front end, project, to do list" />
+        <meta name="description" content="front-end assignments of jm" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="css/fontello.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <main>
+                    <section>
+                        <div class="app">                            
+                            <div class="basic-info">
+                                <div class="date" id="date">Wednsday, 27/01/2017</div><!--
+                             --><div class="tasks-counter-btns">
+                                <div class="tasks-counter" id="remaining-tasks"><i class="icon-list-bullet"></i> <span class="total-counter">0</span></div><!--
+--><div class="tasks-counter" id="completed-tasks"><i class='icon-dot-circled'></i> <span class="completed-counter">0</span></div> 
+                                </div>
+                            </div>
+                            
+                            <div class="adding-tasks">
+                                <input type="text" id="task-description" placeholder="Add a to-do..." maxlength="45" /><!--
+                             --><button type="button" id="btn-add-task"><i class="icon-plus"></i></button>
+                            </div>
+                            
+                            <div class="tasks-sort">
+                                <div class="task-sort-all">all</div><!--
+                             --><div class="task-sort-remaining">remaining</div><!--
+                             --><div class="task-sort-completed">completed</div>
+                            </div>
+                            
+                            <div class="tasks-container">
+                                <ul class="remaining-tasks-list">
+                             
+                                </ul>
+                                
+                                <ul class="completed-tasks-list">
+                              
+                                </ul>
+                            </div>                            
+                        </div>
+                    </section>
+            </main>
+        </div>
+        
+        <script src="jquery-3.2.1.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
