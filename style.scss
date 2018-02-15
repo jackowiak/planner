@@ -1,0 +1,304 @@
+$main-color: #3232ff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #e1e1e1;
+    font-size: 12px;
+    height: 100%;
+}
+
+body, main, section {
+    height: 100%;
+    overflow: auto;
+}
+
+.container {
+    height: 100vh;
+}
+
+.app {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.basic-info {
+    margin: 0;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 18px;
+    background-color: $main-color;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.basic-info .date {
+    display: inline-block;
+    letter-spacing: 1.05px;
+    width: 275px;
+    padding-left: 25px;
+}
+
+.basic-info .tasks-counter-btns {
+    display: inline-block;
+    width: 125px;
+    padding-right: 25px;
+    text-align: center;
+}
+
+.basic-info .tasks-counter-btns .tasks-counter {
+    display: inline-block;
+    font-size: 14px;
+    width: 42.5px;
+}
+
+.basic-info .tasks-counter-btns .tasks-counter:hover {
+    color: #000;
+}
+
+#btn-add-task {
+    background-color: inherit;
+}
+
+.adding-tasks {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    border: 0;
+    padding: 0 25px;
+    background-color: #fff;
+}
+
+.adding-tasks input[type=text] {
+    /* removing default browser's settings; without this, input styling doesn't work correctly on OS X */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    display: inline-block;
+    border: 0;
+    margin: 0;
+    font-size: 12px;
+    outline: none;
+    cursor: pointer;
+    width: 300px;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    border-image: none;
+}
+
+.adding-tasks button {
+    /* removing default browser's settings; without this, input styling doesn't work correctly on OS X */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    display: inline-block;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 0;
+}
+
+.adding-tasks button:hover {
+    color: $main-color;
+}
+
+.tasks-sort {
+    background-color: $main-color;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.5);
+    letter-spacing: 1.3px;
+    cursor: pointer;
+}
+
+.task-sort-all:hover, .task-sort-remaining:hover, .task-sort-completed:hover {
+    background-color: red !important;
+}
+
+.task-sort-all {
+    display: inline-block;
+    margin: 0;
+    border-right: 0.5px solid rgba(211, 211, 211, 0.5);
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #FF0000;
+    color: #fff;
+    width: 33.3%;
+    margin-right: 0.05%;
+}
+
+.task-sort-remaining {
+    display: inline-block;
+    margin: 0;
+    border: 0;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $main-color;
+    color: #fff;
+    width: 33.3%;
+}
+
+.task-sort-completed {
+    display: inline-block;
+    margin: 0;
+    border: 0;
+    border-left: 0.5px solid rgba(211, 211, 211, 0.5);
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $main-color;
+    color: #fff;
+    width: 33.3%;
+    margin-left: 0.05%;
+}
+
+.tasks-container {
+    width: 100%;
+    margin-top: 40px;
+}
+
+ul.remaining-tasks-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.5);
+    background-color: $main-color;
+    width: 400px;
+    padding: 0 25px;
+}
+
+li:hover {
+    background-color: #1919ff;
+}
+
+li div.task-to-do {
+    display: inline-block;
+    width: 275px;
+    font-size: 12px;
+    margin: 0;
+    border: 0;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+li div.btn-tasks {
+    display: inline-block;
+    width: 75px;
+    text-align: right;
+}
+
+li div.btn-tasks button {
+    /* removing default browser's settings; without this, input styling doesn't work correctly on OS X */
+    
+    display: inline-block;
+    width: 25px;
+    font-size: 14px;
+    padding: 10px 0;
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    color: #fff;
+    background-color: inherit;
+}
+
+li div.btn-tasks button.delete:hover {
+    color: #FF0000;
+}
+
+li div.btn-tasks button.completed:hover {
+    color: #000;
+}
+
+.completed-tasks-list li div.btn-tasks button.completed {
+    color: #000;
+}
+
+i.icon-check-empty {
+    position: relative;
+    top: 1.1px;
+}
+
+ul.completed-tasks-list {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 0 !important;
+    padding: 0;
+    border: 0;
+    width: 100%;
+}
+
+ul.completed-tasks-list li div.task-to-do {
+    text-decoration: line-through;
+}
+
+@media (max-width: 576px) {
+    .app {
+        width: 350px;
+    }
+    
+    .basic-info {
+        font-size: 14px;
+    }
+    
+    .basic-info .date {
+        width: 200px;
+        padding-left: 30px;
+    }
+    
+    .basic-info .tasks-counter-btns {
+        text-align: right;
+    }
+    
+    .adding-tasks {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .adding-tasks input[type=text] {
+        padding: 0;
+        padding-left: 15px;
+    }
+    
+    .adding-tasks button {
+        width: 50px;
+    }
+    
+    li {
+        width: 350px;
+    }
+    
+    .tasks-container {
+        width: 350px;
+    }
+    
+    li div.task-to-do {
+        width: 225px;
+    }
+}
