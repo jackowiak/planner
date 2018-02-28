@@ -1,13 +1,3 @@
-window.addEventListener("load", function() {
-    localStorage.getItem("listToDo");
-})
-
-var dataElement;
-
-function storageUpdate() {
-    localStorage.setItem("listToDo", dataElement);
-}
-
 // add new task to list
 function addElement() {
     var addTask = $("#task-description").val();
@@ -24,12 +14,6 @@ function addElement() {
             $("#remaining-tasks")
                 .animate({opacity: 0.8}, "fast")
                 .animate({opacity: 1}, "fast");
-        }
-        
-        dataElement = $(".tasks-container").html();
-        
-        if (window.localstorage){
-            storageUpdate();
         }
     }
 }
